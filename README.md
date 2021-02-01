@@ -22,7 +22,7 @@ git clone https://github.com/moronjesus/angular-marvel-app.git
 ```
 
 
-## Development server
+## Servidor de desarrollo
 
 Ejecute 
 ```bash
@@ -31,31 +31,48 @@ ng serve
 
 para un servidor de desarrollo. Vaya a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
 
-## Code scaffolding
+## Generador de código
 
-Ejecute `ng generate component component-name` para generar un nuevo componente. También puede usar  `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecute 
+```bash
+ng generate component component-name
+``` 
+para generar un nuevo componente. También puede usar  
+```bash
+ng generate directive|pipe|service|class|guard|interface|enum|module.
+```
 
-## Build
+## Construir el proyecto modo producción
 
-Ejecute `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/` directory. Use the `--prod` flag for a production build.
+Ejecute 
+```bash
+ng build
+```  
+para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/` Use la ```bash
+--prod
+``` 
+para una construcción de producción.
+
 
 ## Running unit tests
 
-Ejecute `ng test` para ejecutar las pruebas unitarias a través de[Karma](https://karma-runner.github.io).
-
-
-
-
+Ejecute 
+```bash
+ng test
+```
+para ejecutar las pruebas unitarias a través de[Karma](https://karma-runner.github.io).
 
 ## Documentación técnica
 
 Generaremos la documentación técnica con la librería Compodoc. Esta librería recorrerá nuestro proyecto y nos generará cierto contenido, e integrará los comentarios que hayamos añadido.
 
-![](./readme/assets/compodoc.png)
+![](./readme/assets/imgCompodoc.png)
 
 Generaremos la documentación en la carpeta doc
 Ejectuta por debajo: `compodoc -p tsconfig.app.json src -d doc -o -s
-`npm run compodoc`
+```bash
+npm run compodoc
+```
 
 Generaremos la documentación y nos levantará un servidor para que podamos ver la documentación en el navegador: `http://127.0.0.1:8080`
 
