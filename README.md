@@ -71,6 +71,11 @@ npm run compodoc
 
 - Generaremos la documentación y nos levantará un servidor para que podamos ver la documentación en el navegador: `http://127.0.0.1:8080`
 
+
+## Construido con 🛠️
+
+* [Angular material](https://material.angular.io/) - El framework web usado
+
 ## Further help
 
 - To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
