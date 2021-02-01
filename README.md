@@ -46,10 +46,11 @@ ng generate directive|pipe|service|class|guard|interface|enum|module.
 
 Ejecute 
 ```bash
-ng build
+
 ```  
-para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/` Use la ```bash
---prod
+para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/` Use la 
+```bash
+`--prod`
 ``` 
 para una construcción de producción.
 
@@ -66,7 +67,7 @@ para ejecutar las pruebas unitarias a través de[Karma](https://karma-runner.git
 
 Generaremos la documentación técnica con la librería Compodoc. Esta librería recorrerá nuestro proyecto y nos generará cierto contenido, e integrará los comentarios que hayamos añadido.
 
-![](./readme/assets/imgCompodoc.png)
+![](https://github.com/moronjesus/angular-marvel-app/master/assets/imgCompodoc.png)
 
 Generaremos la documentación en la carpeta doc
 Ejectuta por debajo: `compodoc -p tsconfig.app.json src -d doc -o -s
