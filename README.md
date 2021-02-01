@@ -67,7 +67,7 @@ ng test
 
 - Generaremos la documentación técnica con la librería Compodoc. Esta librería recorrerá nuestro proyecto y nos generará cierto contenido, e integrará los comentarios que hayamos añadido.
 
-![ imagen de commpodoc](https://github.com/moronjesus/angular-marvel-app/main/src/assets/imgCompodoc.png)
+![ imagen de commpodoc](https://github.com/moronjesus/angular-marvel-app/blob/main/src/assets/imgCompodoc.png)
 
 - Generaremos la documentación en la carpeta doc
 - Ejectuta por debajo: `compodoc -p tsconfig.app.json src -d doc -o -s
