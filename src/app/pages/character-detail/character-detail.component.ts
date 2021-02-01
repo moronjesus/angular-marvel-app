@@ -56,7 +56,7 @@ export class CharacterDetailComponent implements OnInit {
 
 /**
 * filtro de Character
-* @param event Character por nombre completo que vamos a filtrar
+* @param event valor que vamos a filtrar 
 */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

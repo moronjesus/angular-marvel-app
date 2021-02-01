@@ -11,6 +11,12 @@ import { Response } from '../models/response';
 })
 export class CreatorsService {
 
+   /**
+   * 
+   * @param http  parametro de httpcliente de angular 
+   * @param constant parametro para las rutas api
+   * @param utilsService servicio para remplazar un parametro 
+   */
 constructor(private http: HttpClient,
   private constant: Constant,
   private utilsService: UtilsService) { }

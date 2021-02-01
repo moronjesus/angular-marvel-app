@@ -62,7 +62,7 @@ export class CreatorDetailComponent implements OnInit {
 
   /**
 * filtro de Creator
-* @param event Creator por nombre completo que vamos a filtrar
+* @param event valor que vamos a filtrar
 */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

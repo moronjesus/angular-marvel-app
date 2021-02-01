@@ -22,7 +22,7 @@ export class CharactersService {
    * 
    * @param http  parametro de httpcliente de angular 
    * @param constant parametro para las rutas api
-   * @param utilsService parametro para remplazar un parametro 
+   * @param utilsService servicio para remplazar un parametro 
    */
   constructor(
     private http: HttpClient,

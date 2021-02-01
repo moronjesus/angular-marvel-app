@@ -99,7 +99,7 @@ export class SeriesPageComponent implements OnInit {
 
  /**
 * filtro de series
-* @param event Serie por nombre completo que vamos a filtrar
+* @param event valor que vamos a filtrar
 */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

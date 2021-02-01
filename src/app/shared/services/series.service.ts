@@ -14,7 +14,7 @@ import { Response } from '../models/response';
 })
 export class SeriesService {
 
-  /**
+ /**
    * 
    * @param http  parametro de httpcliente de angular 
    * @param constant parametro para las rutas api
