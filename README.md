@@ -46,20 +46,14 @@ ng generate directive|pipe|service|class|guard|interface|enum|module.
 
 Ejecute 
 ```bash
- ng build
+ ng build --prod
 ```  
-- para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/` Use la 
-```bash
-`--prod`
-``` 
-- para una construcción de producción.
-
 
 ## Running unit tests
 
 Ejecute 
 ```bash
-ng test
+ng run test
 ```
 - para ejecutar las pruebas unitarias a través de[Karma](https://karma-runner.github.io).
 
