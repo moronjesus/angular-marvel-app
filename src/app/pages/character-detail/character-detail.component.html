@@ -1,0 +1,24 @@
+<app-card-detail [itemDetail]="character">
+</app-card-detail>
+
+<!-- Comics -->
+<hr class="separator" />
+<mat-card>
+  <mat-card-title class="title-card">
+    <h1>Comic</h1>
+  </mat-card-title>
+</mat-card>
+<app-comics [itemComics]="data$ | async">
+</app-comics>
+<mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+
+
+<!-- Series -->
+<hr class="separator" />
+<mat-card>
+  <mat-card-title class="title-card">
+    <h1> Series </h1>
+  </mat-card-title>
+</mat-card>
+<app-serie [itemSerie]="seriesData ">
+</app-serie>

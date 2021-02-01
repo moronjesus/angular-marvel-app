@@ -1,0 +1,22 @@
+<div class="container-card">
+  <mat-card class="example-card" *ngFor="let item of  itemComics">
+    <img mat-card-image src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}" alt="photo" class="image-marvel"
+      >
+      <button mat-mini-fab color="primary" aria-label="Example icon button with a add icon" [routerLink]="['/comicsdetail', item.id ]">
+        <mat-icon>add</mat-icon>
+      </button>
+    <mat-card-title class="title-card">{{item.title}}</mat-card-title>
+    <mat-card-content>
+      <p>Precio:
+        <span>{{item.prices[0].price}}</span>
+      </p>
+      <p *ngFor="let test of item.creators.items; first as isFirst">
+        <span *ngIf="(test.role.toLocaleUpperCase()) === 'WRITER' && isFirst ">
+          Escritor:
+          {{test.name}}
+        </span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+

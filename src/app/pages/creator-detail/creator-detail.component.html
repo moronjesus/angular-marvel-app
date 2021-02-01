@@ -1,0 +1,54 @@
+<div class="container-detail">
+  <mat-card class="card" *ngIf="creatorData">
+    <div class="flex-container">
+      <div class="container-image">
+        <img src="{{creatorData.thumbnail.path}}.{{creatorData.thumbnail.extension}} " alt="Photo of a Shiba Inu"
+          class="picture-creator">
+      </div>
+      <div>
+        <mat-card-content class="container-text">
+          <p class="descrition-chrarater">
+            first Name:
+            {{creatorData.firstName}}
+          </p>
+          <p class="descrition-chrarater">
+            Middle name:
+            {{creatorData.middleName}}
+          </p>
+          <p class="descrition-chrarater">
+            Last name:
+            {{creatorData.lastName}}
+          </p>
+          <p class="descrition-chrarater">
+            FullName:
+            {{creatorData.fullName}}
+          </p>
+        </mat-card-content>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+
+<!-- Comics -->
+<hr class="separator" />
+<mat-card>
+  <mat-card-title class="title-card">
+    <h1>Comic</h1>
+  </mat-card-title>
+</mat-card>
+<app-comics [itemComics]="data$ | async">
+</app-comics>
+<mat-paginator [pageSizeOptions]="[ 10, 25, 100]"></mat-paginator>
+
+
+
+<!-- Series -->
+<hr class="separator" />
+<mat-card>
+  <mat-card-title class="title-card">
+    <h1> Series </h1>
+  </mat-card-title>
+</mat-card>
+<app-serie [itemSerie]="seriesData ">
+</app-serie>

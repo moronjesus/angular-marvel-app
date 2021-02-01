@@ -1,0 +1,12 @@
+<section class="container-home">
+
+  <div class="header_logo">
+    <img src="../../../assets/img/logoMarvel.png" />
+  </div>
+  
+<div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+  <a *ngFor="let charter of charactersData" class=" rk-item ae-masonry__item">
+    <img mat-card-image src="{{charter.thumbnail.path}}.{{charter.thumbnail.extension}}" alt="photo" />
+  </a>
+</div>
+</section>

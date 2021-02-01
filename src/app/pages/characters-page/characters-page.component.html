@@ -1,0 +1,18 @@
+<mat-form-field appearance="fill">
+  <mat-label> filter by alphabet </mat-label>
+  <mat-select [(value)]="selectedAlphabet" (selectionChange)="selectAlphabet($event.value)">
+    <mat-option *ngFor="let data of alphabetItems.getAll()" value={{data.name}}>
+      {{data.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Character" #input>
+</mat-form-field>
+
+<app-character [itemCharacter]="data$ | async">
+</app-character>
+
+<mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>

@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Creator" #input>
+</mat-form-field>
+
+    <app-character [itemCharacter] = "data$ | async">    
+    </app-character>
+    
+<mat-paginator [pageSizeOptions]="[ 10, 25, 100]"></mat-paginator>

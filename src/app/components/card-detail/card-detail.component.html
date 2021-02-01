@@ -1,0 +1,33 @@
+<div class="container-detail">
+  <mat-card class="card" *ngIf="itemDetail">
+
+    <div class="container-image">
+      <img mat-card-image src="{{itemDetail.thumbnail.path}}.{{itemDetail.thumbnail.extension}} "
+        alt="Photo of a Shiba Inu" class="picture-comic">
+    </div>
+    <div class="container-text">
+      <ng-temple *ngIf="itemDetail.title; else title">
+        <mat-card-title class="title-card"> {{itemDetail.title}}</mat-card-title>
+      </ng-temple>
+      <ng-template #title>
+        <mat-card-title class="title-card"> {{itemDetail.name}}</mat-card-title>
+      </ng-template>
+      <ng-temple *ngIf="itemDetail.description; else description">
+        <p>
+          {{itemDetail.description}}
+        </p>
+      </ng-temple>
+      <ng-template #description>
+        <p>
+          Sorry this comic does not have a description at this time.
+        </p>
+      </ng-template>
+      <ng-temple *ngIf="itemDetail.prices">
+        <p>
+          <span>Precio:</span>
+          {{itemDetail.prices[0].price}}
+        </p>
+      </ng-temple>
+    </div>
+  </mat-card>
+</div>

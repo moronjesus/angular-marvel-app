@@ -1,0 +1,34 @@
+
+<app-card-detail [itemDetail]= "comic" >
+</app-card-detail>
+
+<hr class="separator" />
+<div class="flex-container">
+  <mat-card class="container-list">
+    <mat-card-title class="title-card"> <h3>Creator - Role</h3></mat-card-title>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let creator of creactorsData" [routerLink]="['/creatordetail', creator.resourceURI ]">
+        {{creator.name}} - {{creator.role}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
+
+  <mat-card class="container-list">
+    <mat-card-title class="title-card"> <h3>Character </h3></mat-card-title>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let character of characterData"
+        [routerLink]="['/characterdetail', character.resourceURI ]">
+        {{character.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
+</div>
+
+<hr class="separator" />
+<mat-card >
+  <mat-card-title class="title-card"><h3>Comic Suggested</h3></mat-card-title>
+</mat-card>  
+<app-comics [itemComics]="comicSuggestData ">
+
+</app-comics>
+  <mat-paginator  [pageSizeOptions]="[ 5, 10, 25, 100]"></mat-paginator> 

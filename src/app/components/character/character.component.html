@@ -1,0 +1,37 @@
+<div class="container-card">
+  <mat-card class="example-card" *ngFor="let item of itemCharacter">
+    <ng-temple *ngIf="item.name; else creator">
+      
+      <img mat-card-image src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}" alt="photo" class="image-marvel"
+        >
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a add icon" [routerLink]="['/characterdetail', item.id ]">
+          <mat-icon>add</mat-icon>
+        </button>
+    </ng-temple>
+
+    <ng-template #creator>
+      <img mat-card-image src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}" alt="photo" class="image-marvel"
+        >
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a add icon" [routerLink]="['/creatordetail', item.id ]">
+          <mat-icon>add</mat-icon>
+        </button>
+    </ng-template>
+
+    <ng-temple *ngIf="item.firstName; else name">
+      <mat-card-title class="title-card">{{item.firstName}}</mat-card-title>
+    </ng-temple>
+    <ng-template #name>
+      <mat-card-title class="title-card">{{item.name}}</mat-card-title>
+    </ng-template>
+    <mat-card-content>
+
+      <p>Comics:
+        <span>{{item.comics.available}}</span>
+      </p>
+      <p>Series:
+        <span>{{item.series.available}}</span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+</div>

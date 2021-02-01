@@ -1,0 +1,76 @@
+<div class="container-filter">
+  <div>
+    <mat-form-field appearance="fill" class="filter-size">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Series" #input>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Type Series</mat-label>
+      <mat-select [(value)]="selected" (selectionChange)="selectTypeSeries($event.value)">
+        <mat-option value=''>None</mat-option>
+        <mat-option value="collection">Collection</mat-option>
+        <mat-option value="limited">Limited</mat-option>
+        <mat-option value="one shot">One Shot</mat-option>
+        <mat-option value="ongoing">Ongoing</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Type Rating</mat-label>
+      <mat-select [(value)]="selectedRating" (selectionChange)="selectRatingSeries($event.value)">
+        <mat-option value=''>None</mat-option>
+        <mat-option value="MARVEL PSR">Marvel PSR</mat-option>
+        <mat-option value="PSR">PSR</mat-option>
+        <mat-option value="RATED T+">RATED T+</mat-option>
+        <mat-option value="RATED T"> RATED T</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Start Year</mat-label>
+      <input matInput [matDatepicker]="dpStar" [formControl]="dateStart">
+      <mat-datepicker-toggle matSuffix [for]="dpStar"></mat-datepicker-toggle>
+      <mat-datepicker #dpStar startView="multi-year" (yearSelected)="yearStar($event, dpStar)"
+        panelClass="example-month-picker">
+      </mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>End Year</mat-label>
+      <input matInput [matDatepicker]="dpEnd" [formControl]="dateEnd">
+      <mat-datepicker-toggle matSuffix [for]="dpEnd"></mat-datepicker-toggle>
+      <mat-datepicker #dpEnd startView="multi-year" (yearSelected)="yearEnd($event, dpEnd)"
+        panelClass="example-month-picker">
+      </mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="openDateFilter()">Search date</button>
+  </div>
+</div>
+
+
+<div class="container-card">
+  <mat-card class="example-card" *ngFor="let item of data$ | async">
+    <img mat-card-image src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}" alt="photo" class="image-marvel">
+    <mat-card-title class="title-card">{{item.title}}</mat-card-title>
+    <mat-card-content>
+      <p>Start year:
+        <span>{{item.startYear}}</span>
+      </p>
+      <p>End year:
+        <span>{{item.endYear}}</span>
+      </p>
+      <p>Type:
+        <span>{{item.type}}</span>
+      </p>
+      <p>Rating:
+        <span>{{item.rating}}</span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+<mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
